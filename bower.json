@@ -1,0 +1,21 @@
+{
+  "name": "simple-project",
+  "version": "0.0.1",
+  "authors": [
+    "Sergey A. Chebotarev"
+  ],
+  "description": "Simple OpenUI5 Application",
+  "keywords": [
+    "openui5",
+    "simple"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
