@@ -1,44 +1,34 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <title>SAPUI5 in 20 Seconds</title>
-    <!-- 1.) Load SAPUI5 (from a remote server), select theme and control library -->
-    <script id="sap-ui-bootstrap"
-        src="resources/sap-ui-core.js"
-        data-sap-ui-theme="sap_bluecrystal"
-        data-sap-ui-libs="sap.ui.commons"></script>
 
-    <!-- 2.) Create a UI5 button and place it onto the page -->
-    <script>
-        // create the button instance
-        var myButton = new sap.ui.commons.Button("btn");
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
 
-        // set properties, e.g. the text (there is also a shorter way of setting several properties)
-        myButton.setText("Hello World!");
+		<title>Application Best Practices</title>
 
-        // attach an action to the button's "press" event (use jQuery to fade out the button)
-        myButton.attachPress(function(){$("#btn").fadeOut()});
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"sap.ui.demo.tdg": "./"}'>
+		</script>
 
-        // place the button into the HTML element defined below
-        myButton.placeAt("uiArea");
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 
-        // an alternative, more jQuery-like notation for the same is:  
-        /*
-        $(function(){
-            $("#uiArea").sapui("Button", "btn", {
-                text:"Hello World!",
-                press:function(){$("#btn").fadeOut();}
-            });
-         });
-         */
-     </script>
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "sap.ui.demo.tdg"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
 
-</head>
-<body class="sapUiBody">
+	<body class="sapUiBody" id="content" />
 
-    <!-- This is where you place the UI5 button -->
-    <div id="uiArea"></div>
-</body>
 </html>
