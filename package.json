@@ -1,0 +1,16 @@
+{
+  "name": "simple-project",
+  "version": "0.0.1",
+  "description": "Simple OpenUI5 Application",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openui5",
+    "simple"
+  ],
+  "author": "Sergey A. Chebotarev",
+  "license": "MIT"
+}
