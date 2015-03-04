@@ -3,6 +3,11 @@
 module.exports = function(grunt) {
 	
 	grunt.initConfig({
+
+		dir: {
+			bower: 'bower_components',
+			webapp: 'webapp'
+		}
 	// 1. Конфигурирование задач
 		connect: {
 	    	options: {
@@ -39,7 +44,7 @@ module.exports = function(grunt) {
 			'openui5_connect:src:keepalive'
 	]);
 
-	grunt.registerTask("default", [
+	grunt.registerTask('default', [
     	'serve'
     ]);
 }
